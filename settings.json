@@ -1,0 +1,53 @@
+{
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.activityBar.visible": true,
+    "window.menuBarVisibility": "toggle",
+
+    
+    "workbench.colorTheme": "Dracula",
+    "workbench.iconTheme": "material-icon-theme",
+
+    "editor.fontFamily": "'Fira Code'",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 12,
+    "editor.lineHeight": 20,
+    "editor.tabSize": 2,
+
+    "editor.rulers": [80, 120],
+    "editor.formatOnSave": false,
+    
+    "window.zoomLevel": -1,
+
+    "explorer.compactFolders": false,
+
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "terminal.integrated.fontSize": 12,
+
+    "[javascript]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": true,
+        }
+    },
+    "[javascriptreact]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": true,
+        }
+    },
+
+    "emmet.syntaxProfiles": {
+        "javascript": "jsx",
+    },
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact",
+    },
+
+    "gitlens.codeLens.recentChange.enabled": false,
+    "gitlens.codeLens.authors.enabled": false,
+    "gitlens.codeLens.enabled": false,
+    "breadcrumbs.enabled": true,
+    "git.enableSmartCommit": true,
+    "editor.parameterHints.enabled": false,
+    "typescript.updateImportsOnFileMove.enabled": "never",
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+}
