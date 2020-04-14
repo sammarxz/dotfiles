@@ -1,0 +1,94 @@
+nippet t "jsx tag"
+<${1:div}>$0</${1/(\w+).*/$1/}>
+endsnippet
+
+snippet ti "jsx inline tag"
+<${1:div}/>
+endsnippet
+
+snippet i "import module"
+import ${1} from '${2}';
+endsnippet
+
+snippet ri "react imports"
+import React, { Component } from 'react';
+endsnippet
+
+snippet ex "export"
+export default ${1};
+endsnippet
+
+snippet rf "react function" 
+const ${1} = (props) => {
+	return (
+		<${2:div}>
+			${3}
+		</${2/(\w+).*/$1/}>
+	)
+}
+endsnippet
+
+snippet rc "react component"
+class ${1} extends Component {
+	render() {
+		return (
+			<${2:div}>
+				${3}
+			</${2/(\w+).*/$1/}>
+		)
+	}
+}
+
+export default $1;
+endsnippet
+
+snippet rp "react proptypes" 
+$1.propTypes = {
+  children: PropTypes.node.isRequired,
+}
+endsnippet
+
+snippet ris "react import styled"
+import styled  from 'styled-components'
+endsnippet
+
+
+snippet rs "react styled"
+const ${1} = styled.${2:div}\`
+	${3}
+\`
+endsnippet
+
+snippet cdm "react componentDidMount lifecycle"
+componentDidMount() {
+	$1
+}
+
+endsnippet
+
+snippet cs "class constructor"
+constructor(${1}) {
+  this.${2} = ${3}
+}
+endsnippet
+
+snippet cdu "react componentDidUpdate lifecycle"
+componentDidUpdate() {
+	$1
+}
+
+endsnippet
+
+snippet gsf "react get derived state from props"
+static getDerivedStateFromProps(props, state){
+	$1
+	return({
+	$2
+	})
+}
+
+endsnippet
+
+snippet  log "console log"
+console.log($1);
+endsnippet
