@@ -115,12 +115,12 @@ let g:lightline = {
 let g:ale_sign_error = '❌'
 let g:ale_sign_warning = '⚠️'
 let g:ale_fix_on_save = 1
+let g:ale_linters = {'python': ['flake8', 'pylint']}
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['prettier', 'eslint'],
-\   'python': ['pyflakes', 'flake8', 'pylint'],
+\   'python': ['yapf'],
 \}
-
 
 " Plugin: Snippets
 let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
