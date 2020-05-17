@@ -19,6 +19,7 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
+Plug 'sainnhe/sonokai'
 
 call plug#end()
 
@@ -45,7 +46,7 @@ set confirm
 set visualbell
 set noerrorbells
 set mouse=a
-set cmdheight=2 
+set cmdheight=2
 set nojoinspaces
 set wrap
 set linebreak
@@ -88,8 +89,12 @@ nmap <leader>v :vsp<cr><c-w><c-w>
 " toggle nerdtree
 map <leader><tab> :NERDTreeToggle<cr>
 
-" toggle tagbar
-map <leader>t :TagbarToggle<cr>
+" tabs shortcuts
+map <leader>t :tabnew<cr>
+map <leader>> :tabprev<cr>
+map <leader>< :tabnext<cr>
+map <leader>1 :tabfirst<cr>
+map <leader>2 :tablast<cr>
 
 " Using Tab for Emmet
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
@@ -108,7 +113,7 @@ let g:ctrlp_show_hidden = 1
 
 " Plugin: Lightline
 let g:lightline = {
-\ 'colorscheme': 'one',
+\ 'colorscheme': 'sonokai',
 \ }
 
 " Plugin: Ale
@@ -124,6 +129,6 @@ let g:ale_fixers = {
 
 " Plugin: Snippets
 let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
-let g:UltiSnipsExpandTrigger="<tab>"               
+let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
