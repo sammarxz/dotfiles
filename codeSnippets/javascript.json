@@ -1,0 +1,36 @@
+{
+	"componentFunctional": {
+    "prefix": "rfc",
+    "body": [
+      "import React from 'react';",
+      "",
+      "const ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}} = () => {",
+      "  return <div />;",
+      "}",
+      "",
+      "export default ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}};"
+    ],
+    "description": "Create ReactJS Functional Component"
+	},
+	"import": {
+    "prefix": "i",
+    "body": [
+      "import ${1} from '${2}';",
+    ],
+    "description": "Import Component"
+	},
+	"jsxTag": {
+    "prefix": "t",
+    "body": [
+      "<${1}>${2}</${1}>'",
+    ],
+    "description": "Create JSX Tag"
+	},
+	"jsxAutoCloseTag": {
+    "prefix": "ti",
+    "body": [
+      "<${1} />'",
+    ],
+    "description": "Create JSX Auto Close Tag"
+  }	
+}
