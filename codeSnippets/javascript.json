@@ -1,5 +1,5 @@
 {
-	"componentFunctional": {
+  "componentFunctional": {
     "prefix": "rfc",
     "body": [
       "import React from 'react';",
@@ -32,5 +32,17 @@
       "<${1} />'",
     ],
     "description": "Create JSX Auto Close Tag"
-  }	
+  },
+	"styles": {
+    "prefix": "styled-react",
+    "body": [
+      "import styled from 'styled-components';",
+      "",
+      "export const ${1:Container} = styled.${2:div}`",
+      "  ${3}",
+      "`;",
+      ""
+    ],
+    "description": "Create ReactJS Styled Components file"
+  },
 }
