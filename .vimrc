@@ -30,7 +30,7 @@ set background=dark
 set termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-colorscheme sonokai
+colorscheme eighties
 
 
 set clipboard=unnamedplus
@@ -89,6 +89,8 @@ nmap <leader>v :vsp<cr><c-w><c-w>
 " toggle nerdtree
 map <leader><tab> :NERDTreeToggle<cr>
 
+
+
 " tabs shortcuts
 map <leader>t :tabnew<cr>
 map <leader>> :tabprev<cr>
@@ -101,6 +103,11 @@ imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 " Plugin: NERDTree
 let NERDTreeStatusline= "%{ getcwd() }"
+let NERDTreeShowHidden=1
+let NERDTreeIgnore=['\.cache$', '\.git$', '^node_modules$'] "
+
+" show hidden files in NERDTREE
+let NERDTreeShowHidden=1
 
 " Plugin: YouCompleteMe
 let g:ycm_key_list_select_completion   = ['<C-j>', '<C-n>', '<Down>']
@@ -113,7 +120,7 @@ let g:ctrlp_show_hidden = 1
 
 " Plugin: Lightline
 let g:lightline = {
-\ 'colorscheme': 'sonokai',
+\ 'colorscheme': 'seoul256',
 \ }
 
 " Plugin: Ale
