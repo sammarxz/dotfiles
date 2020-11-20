@@ -19,7 +19,8 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
-Plug 'sainnhe/sonokai'
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'arrufat/vala.vim'
 
 call plug#end()
 
@@ -30,7 +31,7 @@ set background=dark
 set termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-colorscheme eighties
+colorscheme palenight
 
 
 set clipboard=unnamedplus
@@ -101,6 +102,12 @@ map <leader>2 :tablast<cr>
 " Using Tab for Emmet
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
+" Palenight
+let g:palenight_terminal_italics=1
+let g:palenight_color_overrides = {
+\    'black': { 'gui': '#000000', "cterm": "0", "cterm16": "0" },
+\}
+
 " Plugin: NERDTree
 let NERDTreeStatusline= "%{ getcwd() }"
 let NERDTreeShowHidden=1
@@ -120,7 +127,7 @@ let g:ctrlp_show_hidden = 1
 
 " Plugin: Lightline
 let g:lightline = {
-\ 'colorscheme': 'seoul256',
+\ 'colorscheme': 'palenight',
 \ }
 
 " Plugin: Ale
@@ -139,3 +146,9 @@ let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
+
+
+if (has("nvim"))
+  "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
